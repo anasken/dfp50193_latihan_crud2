@@ -1,13 +1,14 @@
 <?php	
+    require 'conn.php';
     $idmakanan = $_GET['idmakanan'];
     $sql = "SELECT * FROM makanan_sampingan WHERE idmakanan = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('i', $idmakanan);
     $stmt->execute();
     $result = $stmt->get_result();
-    $row = $result->fetch_array();
+    $row = $result->fetch_object();
     ?>
-    <form action="kemaskini_simpan.php" method="post">
+    <form action="simpan_kemaskini.php" method="post">
         <input type="hidden" name="idmakanan" value="<?php echo $row->idmakanan; ?>"/>
         <table>
             <tr>
