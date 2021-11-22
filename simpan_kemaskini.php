@@ -10,7 +10,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param('sii', $nama, $bilangan, $idmakanan);
 $stmt->execute();
 
-if ($mysqli->error) {
+if ($conn->error) {
     ?>
     <script>
         alert('Maaf! Dia keluar error do');
