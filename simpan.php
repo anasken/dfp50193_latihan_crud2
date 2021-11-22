@@ -1,6 +1,7 @@
 <?php
 require 'conn.php';
 
+// $idmakanan = $_POST['idmakanan'];
 $nama = $_POST['nama'];
 $bilangan = $_POST['bilangan'];
 
@@ -12,7 +13,7 @@ $stmt->execute();
 if ($conn->error) {
 ?>
     <script>
-        alert('Maaf! Nama makanan tersebut sudah wujud dalam senarai');
+        alert('Maaf! Dia keluar error do');
         window.location = 'index.php';
     </script>
 <?php

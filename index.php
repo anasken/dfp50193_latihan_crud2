@@ -31,7 +31,7 @@
                     <td>
                         <a href="kemaskini.php?idmakanan=<?php echo $row->idmakanan; ?>">Edit</a>
                         |
-                        <a href="padam.php?idmakanan=<?php echo $row->idmakanan; ?>" onclick="return confirm('Betul ke nak padam?');">Padam</a>
+                        <a href="padam.php?idmakanan=<?php echo $row->idmakanan; ?>" onclick="return confirm('Seres ah nak padam!??');">Padam</a>
                     </td>
                 </tr>
         <?php
